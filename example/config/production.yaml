@@ -1,0 +1,8 @@
+crypto:
+  key: TNXyV/MRJZVWbNR6DRuJjrHmV1F38KWsNnrYKasNc5P1kTM2hnhHESA7keQIsT/KpIN8aPXai2KQji+OQ/SVu04h5huQWNer66ucF7nxMks5UI5x8uPTlcY0MFE=
+  provider: password
+secret:
+  ciphertext: r1LbAtUZEsvUo+UhBeSLf5lPpxUmwqwPjGZSR4ErUUrmZ772JMytHYGx+cxMzmIB/2ooZioMiWlfTrxEFXWkwA==
+  encrypted: true
+  hash: 5d5e35b395fc5208c879b139be3c20ce6a6707e275c51871a0e5ea7bebb64731
+enableSecretFeature: true

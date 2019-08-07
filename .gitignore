@@ -1,0 +1,11 @@
+node_modules
+dist
+.rpt2_cache
+.vscode
+*.log
+.jest
+.DS_Store
+.idea
+.cache
+docs/
+reports/

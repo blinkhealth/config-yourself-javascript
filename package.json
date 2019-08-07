@@ -1,0 +1,74 @@
+{
+  "private": true,
+  "version": "2.0.0-beta",
+  "name": "@blinkhealth/config-yourself",
+  "description": "A typescrypt + javascript runtime for decrypting config-yourself files",
+  "homepage": "https://github.com/blinkhealth/config-yourself-typescript",
+  "bugs": {
+    "url": "https://github.com/blinkhealth/config-yourself-typescript/issues"
+  },
+  "author": {
+    "name": "Blink Health Engineering",
+    "url": "https://github.com/blinkhealth"
+  },
+  "repository": "github:blinkhealth/config-yourself-typescript",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "src": "src/index.ts",
+  "types": "dist/types/index.d.ts",
+  "license": "Apache-2.0",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=8.12.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "docs": "typedoc --out docs src",
+    "test": "jest",
+    "test:coverage": "yarn test --ci --coverage --reporters=default --reporters=jest-junit",
+    "lint": "yarn prettier './src/**/*.ts'",
+    "lint:fix": "yarn lint --write",
+    "lint:check": "yarn lint --check"
+  },
+  "dependencies": {
+    "@aws-sdk/client-kms-node": "0.1.0-preview.3",
+    "deepmerge": "3.3.0",
+    "js-yaml": "3.13.1",
+    "openpgp": "4.5.5",
+    "scrypt": "6.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@types/js-yaml": "3.12.1",
+    "@types/mock-fs": "3.6.30",
+    "@types/node": "12.0.12",
+    "@types/openpgp": "4.4.5",
+    "@types/scrypt": "6.0.0",
+    "@typescript-eslint/eslint-plugin": "1.11.0",
+    "@typescript-eslint/parser": "1.11.0",
+    "eslint": "6.0.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "jest": "24.8.0",
+    "jest-junit": "6.4.0",
+    "mock-fs": "4.10.1",
+    "prettier": "1.18.2",
+    "rollup": "1.16.3",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-multi-entry": "2.1.0",
+    "rollup-plugin-typescript2": "0.21.2",
+    "ts-jest": "24.0.2",
+    "ts-loader": "6.0.4",
+    "typedoc": "0.14.2",
+    "typescript": "3.5.2"
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "includeConsoleOutput": true,
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{classname}: {title}"
+  }
+}

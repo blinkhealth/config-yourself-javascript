@@ -1,0 +1,7 @@
+crypto:
+  key: 80iPTi9miUKszPI7ZPlJuS3wL3qaUANnML4UoIMlrZmrei/Yz/Pda4kQMxV0esbsYMKOViVa28WgPW/p+t+3MSMNcm3Cs1uDXpBDiqYLBA+FjWjLpSonMlHJ7gQ=
+  provider: password
+secret:
+  ciphertext: T6PADXHtzPdy9j/liMJeEhYj+10FBJuy9UlGcavYclirxQXRSvFZoEscZV9yeF4rsjmvUNWBXWpXqT0X71Fg
+  encrypted: true
+  hash: cf21fe48d2394a4cbfd68bb099ce274b4be0cb9f53ec077f12f7693003b956f7
