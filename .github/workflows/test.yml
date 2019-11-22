@@ -1,6 +1,6 @@
 on: push
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
@@ -24,4 +24,4 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./coverage/lcov.info
+          path-to-lcov: ./reports/lcov.info
