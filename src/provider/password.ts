@@ -1,5 +1,5 @@
 import { CryptoProvider } from './index'
-import { hash } from 'scrypt'
+import { scryptSync } from 'crypto'
 import DataKey from './datakey'
 
 const SALT_SIZE = 12
@@ -25,27 +25,6 @@ export interface PasswordSecrets {
    * The password to decrypt this file with
    */
   password: string
-}
-
-interface ScryptOpts {
-  N: number
-  r: number
-  p: number
-  maxmem: number
-}
-type scryptCallback = (err: Error | null, obj: Buffer) => void
-type scryptSignature = (
-  password: string,
-  salt: Buffer,
-  keylen: number,
-  opts: ScryptOpts,
-  callback: scryptCallback,
-) => void
-
-function resolveScrypt(): scryptSignature {
-  return (password: string, salt: Buffer, keylen: number, opts: ScryptOpts, callback: scryptCallback): void => {
-    hash(password.toString(), opts, keylen, Buffer.from(salt), callback)
-  }
 }
 
 /**
@@ -78,7 +57,7 @@ export default class Password implements CryptoProvider {
       throw new Error('No password provided for decryption, remove the crypto property if no encryption is needed')
     }
 
-    let keyBytes = Buffer.from(crypto.key, 'base64')
+    const keyBytes = Buffer.from(crypto.key, 'base64')
     this.password = secrets.password
     this.salt = keyBytes.slice(0, SALT_SIZE)
     this.key = keyBytes.slice(SALT_SIZE)
@@ -93,17 +72,7 @@ export default class Password implements CryptoProvider {
   }
 
   private async decryptKey(): Promise<DataKey> {
-    const scrypt = await resolveScrypt()
-
-    const derivedKey = await new Promise<Buffer>((resolve, reject): void => {
-      scrypt(this.password, this.salt, 32, SCRYPT_OPTIONS, (err: Error | null, derivedKey: Buffer): void => {
-        if (err) {
-          reject(err)
-        } else {
-          resolve(derivedKey)
-        }
-      })
-    })
+    const derivedKey = scryptSync(this.password, this.salt, 32, SCRYPT_OPTIONS)
 
     let fileKey: Buffer
     try {

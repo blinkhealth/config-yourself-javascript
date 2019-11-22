@@ -22,13 +22,13 @@
     "src"
   ],
   "engines": {
-    "node": ">=8.12.0"
+    "node": ">=10.9.0"
   },
   "scripts": {
     "build": "rollup -c",
     "docs": "typedoc --out docs src",
     "test": "jest",
-    "test:coverage": "yarn test --ci --coverage --reporters=default --reporters=jest-junit",
+    "test:coverage": "yarn test --ci --coverage --coverageReporters=lcov",
     "lint": "yarn prettier './src/**/*.ts'",
     "lint:fix": "yarn lint --write",
     "lint:check": "yarn lint --check"
@@ -37,8 +37,7 @@
     "@aws-sdk/client-kms-node": "0.1.0-preview.8",
     "deepmerge": "4.2.2",
     "js-yaml": "3.13.1",
-    "openpgp": "4.6.2",
-    "scrypt": "6.0.3"
+    "openpgp": "4.6.2"
   },
   "devDependencies": {
     "@types/jest": "24.0.22",
@@ -53,7 +52,6 @@
     "eslint-config-prettier": "6.5.0",
     "eslint-plugin-prettier": "3.1.1",
     "jest": "24.9.0",
-    "jest-junit": "9.0.0",
     "mock-fs": "4.10.3",
     "prettier": "1.19.1",
     "rollup": "1.26.4",
