@@ -71,15 +71,10 @@ workflows:
   feature:
     jobs:
       - test:
-          filters: { branches: { ignore: [ master ] } }
+          filters: { branches: { ignore: [master] } }
   release_production:
     jobs:
-      - build:
-          filters:
-            branches: { ignore: /.*/ }
-            tags: { only: /v.*/ }
       - publish:
-          requires: [ build ]
           filters:
             branches: { ignore: /.*/ }
             tags: { only: /v.*/ }
