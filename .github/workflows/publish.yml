@@ -4,16 +4,27 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ env.cache-name }}-
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+
       - name: get dependencies
         run: |
           NODE_ENV=development yarn install --frozen-lockfile
       - name: build and publish
         run: |
           yarn build
-          echo yarn version --new-version {{ github.ref }}
+          echo yarn version --new-version ${{ github.ref }}
           echo yarn publish
           yarn docs
       - name: update git pages
         uses: maxheld83/ghpages@v0.2.1
         env:
           BUILD_DIR: 'docs/'
+          GITHUB_PAT: '${{ secrets.GITHUB_TOKEN }}'
