@@ -24,7 +24,8 @@ jobs:
           echo yarn publish
           yarn docs
       - name: update git pages
-        uses: maxheld83/ghpages@v0.2.1
-        env:
-          BUILD_DIR: 'docs/'
-          GITHUB_PAT: '${{ secrets.GITHUB_TOKEN }}'
+        uses: JamesIves/github-pages-deploy-action@3.0.2
+        with:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          BRANCH: gh-pages
+          FOLDER: 'docs/'
