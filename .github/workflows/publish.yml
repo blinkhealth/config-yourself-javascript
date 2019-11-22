@@ -19,11 +19,18 @@ jobs:
       - name: get dependencies
         run: |
           NODE_ENV=development yarn install --frozen-lockfile
-      - name: build and publish
-        run: |
+      - name: Change package.json version
+        run:
           export GIT_TAG="${{ github.ref }}"
+          # remove v prefix from tag
           yarn version --new-version "${GIT_TAG//v/}"
+          # verify the version got changed
           grep -m 1 version package.json
+      - name: build and publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
           yarn build
           yarn publish
           yarn docs
