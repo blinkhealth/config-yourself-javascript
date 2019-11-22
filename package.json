@@ -28,7 +28,7 @@
     "build": "rollup -c",
     "docs": "typedoc --out docs src",
     "test": "jest",
-    "test:coverage": "yarn test --ci --coverage --reporters=default --reporters=jest-junit",
+    "test:coverage": "yarn test --ci --coverage --coverageReporters=lcov",
     "lint": "yarn prettier './src/**/*.ts'",
     "lint:fix": "yarn lint --write",
     "lint:check": "yarn lint --check"
@@ -52,7 +52,6 @@
     "eslint-config-prettier": "6.5.0",
     "eslint-plugin-prettier": "3.1.1",
     "jest": "24.9.0",
-    "jest-junit": "9.0.0",
     "mock-fs": "4.10.3",
     "prettier": "1.19.1",
     "rollup": "1.26.4",

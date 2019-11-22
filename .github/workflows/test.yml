@@ -1,7 +1,4 @@
-on:
-  push:
-    tags:
-      - v*.*.*
+on: push
 jobs:
   publish:
     runs-on: ubuntu-18.04
@@ -19,17 +16,12 @@ jobs:
       - name: get dependencies
         run: |
           NODE_ENV=development yarn install --frozen-lockfile
-      - name: build and publish
+      - name: run tests
         run: |
-          export GIT_TAG="${{ github.ref }}"
-          yarn version --new-version "${GIT_TAG//v/}"
-          grep -m 1 version package.json
-          yarn build
-          yarn publish
-          yarn docs
-      - name: update git pages
-        uses: JamesIves/github-pages-deploy-action@3.0.2
+          yarn lint:check
+          yarn test:coverage
+      - name: Push coverage results to Coveralls
+        uses: coverallsapp/github-action@master
         with:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          BRANCH: gh-pages
-          FOLDER: 'docs/'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./coverage/lcov.info
