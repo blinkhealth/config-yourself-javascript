@@ -20,7 +20,7 @@ jobs:
         run: |
           NODE_ENV=development yarn install --frozen-lockfile
       - name: Change package.json version
-        run:
+        run: |
           export GIT_TAG="${{ github.ref }}"
           # remove v prefix from tag
           yarn version --new-version "${GIT_TAG//v/}"
