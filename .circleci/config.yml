@@ -2,7 +2,7 @@ version: 2
 defaults: &defaults
   working_directory: ~/app
   docker:
-    - image: circleci/node:lts
+    - image: circleci/node:8.12.0
       environment:
         NODE_ENV: development
 
@@ -16,7 +16,9 @@ jobs:
             - config-yourself-ts-0-deps-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
-          command: NODE_ENV=development yarn install --frozen-lockfile
+          command: |
+            sudo apt-get update && sudo apt-get install -y build-essential
+            NODE_ENV=development yarn install --frozen-lockfile
       - save_cache:
           key: config-yourself-ts-0-deps-{{ checksum "yarn.lock" }}
           paths:
@@ -45,7 +47,9 @@ jobs:
             - config-yourself-ts-0-deps-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
-          command: NODE_ENV=development yarn install --frozen-lockfile
+          command: |
+            sudo apt-get update && sudo apt-get install -y build-essential
+            NODE_ENV=development yarn install --frozen-lockfile
       - run:
           name: Build package
           command: yarn build
@@ -71,15 +75,10 @@ workflows:
   feature:
     jobs:
       - test:
-          filters: { branches: { ignore: [ master ] } }
+          filters: { branches: { ignore: [master] } }
   release_production:
     jobs:
-      - build:
-          filters:
-            branches: { ignore: /.*/ }
-            tags: { only: /v.*/ }
       - publish:
-          requires: [ build ]
           filters:
             branches: { ignore: /.*/ }
             tags: { only: /v.*/ }
