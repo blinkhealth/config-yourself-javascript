@@ -1,0 +1,19 @@
+on: [push]
+jobs:
+  publish:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: get dependencies
+        run: |
+          NODE_ENV=development yarn install --frozen-lockfile
+      - name: build and publish
+        run: |
+          yarn build
+          echo yarn version --new-version {{ github.ref }}
+          echo yarn publish
+          yarn docs
+      - name: update git pages
+        uses: maxheld83/ghpages@v0.2.1
+        env:
+          BUILD_DIR: 'docs/'
