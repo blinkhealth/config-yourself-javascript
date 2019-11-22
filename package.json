@@ -22,7 +22,7 @@
     "src"
   ],
   "engines": {
-    "node": ">=8.12.0"
+    "node": ">=10.9.0"
   },
   "scripts": {
     "build": "rollup -c",
@@ -37,8 +37,7 @@
     "@aws-sdk/client-kms-node": "0.1.0-preview.8",
     "deepmerge": "4.2.2",
     "js-yaml": "3.13.1",
-    "openpgp": "4.6.2",
-    "scrypt": "6.0.3"
+    "openpgp": "4.6.2"
   },
   "devDependencies": {
     "@types/jest": "24.0.22",
