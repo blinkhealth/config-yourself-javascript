@@ -1,5 +1,7 @@
 # @blinkhealth/config-yourself
 
+[![Coverage Status](https://coveralls.io/repos/github/blinkhealth/config-yourself-javascript/badge.svg?branch=master)](https://coveralls.io/github/blinkhealth/config-yourself-javascript?branch=master)[![npm version](https://badge.fury.io/js/%40blinkhealth%2Fconfig-yourself.svg)](https://badge.fury.io/js/%40blinkhealth%2Fconfig-yourself)
+
 A typescrypt + javascript runtime for decrypting [go-config-yourself](https://github.com/blinkhealth/go-config-yourself) files.
 
 It takes a bunch of config objects, deep merges them and then decrypt the resulting values (if any) in an **async** fashion.
