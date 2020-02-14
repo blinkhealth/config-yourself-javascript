@@ -108,20 +108,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new GPG<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, secrets<span class="tsd-signature-symbol">: </span><a href="../interfaces/gpgsecrets.html" class="tsd-signature-type">GPGSecrets</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gpg.html" class="tsd-signature-type">GPG</a></li>
+						<li class="tsd-signature tsd-kind-icon">new GPG<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span>, secrets<span class="tsd-signature-symbol">: </span><a href="../interfaces/gpgsecrets.html" class="tsd-signature-type">GPGSecrets</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gpg.html" class="tsd-signature-type">GPG</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/provider/gpg.ts#L45">provider/gpg.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/gpg.ts#L45">provider/gpg.ts:45</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
 									</ul>
 								</li>
 								<li>
@@ -146,7 +149,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/cryptoprovider.html">CryptoProvider</a>.<a href="../interfaces/cryptoprovider.html#decrypt">decrypt</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/provider/gpg.ts#L61">provider/gpg.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/gpg.ts#L61">provider/gpg.ts:61</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -199,6 +202,9 @@
 						<a href="password.html" class="tsd-kind-icon">Password</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/cryptoproperty.html" class="tsd-kind-icon">Crypto<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -222,6 +228,15 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#secrets" class="tsd-kind-icon">Secrets</a>
 					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#envvalues" class="tsd-kind-icon">env<wbr>Values</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#nonce_byte_size" class="tsd-kind-icon">NONCE_<wbr>BYTE_<wbr>SIZE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#salt_size" class="tsd-kind-icon">SALT_<wbr>SIZE</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#parse" class="tsd-kind-icon">parse</a>
 					</li>
@@ -233,6 +248,21 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#file" class="tsd-kind-icon">file</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#recurse" class="tsd-kind-icon">recurse</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#validprovider" class="tsd-kind-icon">valid<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#yamlloader" class="tsd-kind-icon">yaml<wbr>Loader</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="../globals.html#scrypt_options" class="tsd-kind-icon">SCRYPT_<wbr>OPTIONS</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="../globals.html#loaders" class="tsd-kind-icon">loaders</a>
 					</li>
 				</ul>
 			</nav>

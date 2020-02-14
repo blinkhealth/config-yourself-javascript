@@ -52,7 +52,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> @blinkhealth/config-yourself</h1>
+			<h1>@blinkhealth/config-yourself</h1>
 		</div>
 	</div>
 </header>
@@ -76,6 +76,7 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/cryptoproperty.html" class="tsd-kind-icon">Crypto<wbr>Property</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/gpgcrypto.html" class="tsd-kind-icon">GPGCrypto</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/gpgsecrets.html" class="tsd-kind-icon">GPGSecrets</a></li>
@@ -89,11 +90,14 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias"><a href="globals.html#secrets" class="tsd-kind-icon">Secrets</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#envvalues" class="tsd-kind-icon">env<wbr>Values</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#nonce_byte_size" class="tsd-kind-icon">NONCE_<wbr>BYTE_<wbr>SIZE</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#salt_size" class="tsd-kind-icon">SALT_<wbr>SIZE</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#parse" class="tsd-kind-icon">parse</a></li>
 							</ul>
 						</section>
@@ -103,6 +107,16 @@
 								<li class="tsd-kind-function"><a href="globals.html#load" class="tsd-kind-icon">Load</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#env" class="tsd-kind-icon">env</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#file" class="tsd-kind-icon">file</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#recurse" class="tsd-kind-icon">recurse</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#validprovider" class="tsd-kind-icon">valid<wbr>Provider</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#yamlloader" class="tsd-kind-icon">yaml<wbr>Loader</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal"><a href="globals.html#scrypt_options" class="tsd-kind-icon">SCRYPT_<wbr>OPTIONS</a></li>
+								<li class="tsd-kind-object-literal"><a href="globals.html#loaders" class="tsd-kind-icon">loaders</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,20 +130,61 @@
 					<div class="tsd-signature tsd-kind-icon">Secrets<span class="tsd-signature-symbol">:</span> <a href="interfaces/passwordsecrets.html" class="tsd-signature-type">PasswordSecrets</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/gpgsecrets.html" class="tsd-signature-type">GPGSecrets</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/provider/index.ts#L22">provider/index.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/index.ts#L22">provider/index.ts:22</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="envvalues" class="tsd-anchor"></a>
+					<h3>env<wbr>Values</h3>
+					<div class="tsd-signature tsd-kind-icon">env<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><a href="interfaces/mapofvalues.html" class="tsd-signature-type">MapOfValues</a><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/env.ts#L5">parse/env.ts:5</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>value<span class="tsd-signature-symbol">: </span><a href="interfaces/mapofvalues.html" class="tsd-signature-type">MapOfValues</a></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
-					<a name="parse" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> parse</h3>
-					<div class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/home/runner/work/config-yourself-javascript/config-yourself-javascript/src/parse/index&quot;</span><span class="tsd-signature-symbol"> =&nbsp;parseModule</span></div>
+					<a name="nonce_byte_size" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> NONCE_<wbr>BYTE_<wbr>SIZE</h3>
+					<div class="tsd-signature tsd-kind-icon">NONCE_<wbr>BYTE_<wbr>SIZE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">32</span><span class="tsd-signature-symbol"> = 32</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/index.ts#L13">index.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/datakey.ts#L3">provider/datakey.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="salt_size" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> SALT_<wbr>SIZE</h3>
+					<div class="tsd-signature tsd-kind-icon">SALT_<wbr>SIZE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">12</span><span class="tsd-signature-symbol"> = 12</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L5">provider/password.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="parse" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> parse</h3>
+					<div class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/home/runner/work/config-yourself-javascript/config-yourself-javascript/src/parse/index&quot;</span><span class="tsd-signature-symbol"> = parseModule</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/index.ts#L13">index.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -140,13 +195,13 @@
 					<a name="load" class="tsd-anchor"></a>
 					<h3>Load</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Load<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoProperty</span>, secrets<span class="tsd-signature-symbol">?: </span><a href="globals.html#secrets" class="tsd-signature-type">Secrets</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">Load<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="interfaces/cryptoproperty.html" class="tsd-signature-type">CryptoProperty</a>, secrets<span class="tsd-signature-symbol">?: </span><a href="globals.html#secrets" class="tsd-signature-type">Secrets</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/provider/index.ts#L30">provider/index.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/index.ts#L30">provider/index.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -157,7 +212,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>config: <span class="tsd-signature-type">CryptoProperty</span></h5>
+									<h5>config: <a href="interfaces/cryptoproperty.html" class="tsd-signature-type">CryptoProperty</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A map of values to initialize the provider with</p>
 									</div>
@@ -184,7 +239,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/parse/env.ts#L14">parse/env.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/env.ts#L14">parse/env.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -195,19 +250,19 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> prefix: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;BLINKCONFIG&quot;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> prefix: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;BLINKCONFIG&quot;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The environment key prefix to filter for,</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> separator: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;.&quot;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> separator: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;.&quot;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The separator character to use between the <code>prefix</code> and key paths themselves</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> source: <span class="tsd-signature-type">ProcessEnv</span><span class="tsd-signature-symbol"> =&nbsp;process.env</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> source: <span class="tsd-signature-type">ProcessEnv</span><span class="tsd-signature-symbol"> = process.env</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The source map to get values from</p>
 									</div>
@@ -227,7 +282,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/a0b4918/src/parse/file.ts#L24">parse/file.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L24">parse/file.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -244,7 +299,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> format: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;yaml&quot;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> format: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;yaml&quot;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The format to interpet this file as</p>
 									</div>
@@ -253,6 +308,171 @@
 							<h4 class="tsd-returns-title">Returns <a href="interfaces/mapofvalues.html" class="tsd-signature-type">MapOfValues</a></h4>
 						</li>
 					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="recurse" class="tsd-anchor"></a>
+					<h3>recurse</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">recurse<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, provider<span class="tsd-signature-symbol">: </span><a href="interfaces/cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/config.ts#L13">config.ts:13</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>provider: <a href="interfaces/cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="validprovider" class="tsd-anchor"></a>
+					<h3>valid<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">valid<wbr>Provider<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">name</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">loaders</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L14">parse/file.ts:14</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">name</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">loaders</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="yamlloader" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> yaml<wbr>Loader</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">yaml<wbr>Loader<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/mapofvalues.html" class="tsd-signature-type">MapOfValues</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L6">parse/file.ts:6</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/mapofvalues.html" class="tsd-signature-type">MapOfValues</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="scrypt_options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> SCRYPT_<wbr>OPTIONS</h3>
+					<div class="tsd-signature tsd-kind-icon">SCRYPT_<wbr>OPTIONS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L6">provider/password.ts:6</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="scrypt_options.n" class="tsd-anchor"></a>
+						<h3>N</h3>
+						<div class="tsd-signature tsd-kind-icon">N<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 32 * 1024</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L7">provider/password.ts:7</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="scrypt_options.maxmem" class="tsd-anchor"></a>
+						<h3>maxmem</h3>
+						<div class="tsd-signature tsd-kind-icon">maxmem<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 33 * 1024 * 1024</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L10">provider/password.ts:10</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="scrypt_options.p" class="tsd-anchor"></a>
+						<h3>p</h3>
+						<div class="tsd-signature tsd-kind-icon">p<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L9">provider/password.ts:9</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="scrypt_options.r" class="tsd-anchor"></a>
+						<h3>r</h3>
+						<div class="tsd-signature tsd-kind-icon">r<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 8</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L8">provider/password.ts:8</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="loaders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> loaders</h3>
+					<div class="tsd-signature tsd-kind-icon">loaders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L8">parse/file.ts:8</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="loaders.json" class="tsd-anchor"></a>
+						<h3>json</h3>
+						<div class="tsd-signature tsd-kind-icon">json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NodeRequire</span><span class="tsd-signature-symbol"> = require</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L9">parse/file.ts:9</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="loaders.yaml" class="tsd-anchor"></a>
+						<h3>yaml</h3>
+						<div class="tsd-signature tsd-kind-icon">yaml<span class="tsd-signature-symbol">:</span> <a href="globals.html#yamlloader" class="tsd-signature-type">yamlLoader</a><span class="tsd-signature-symbol"> = yamlLoader</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L10">parse/file.ts:10</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="loaders.yml" class="tsd-anchor"></a>
+						<h3>yml</h3>
+						<div class="tsd-signature tsd-kind-icon">yml<span class="tsd-signature-symbol">:</span> <a href="globals.html#yamlloader" class="tsd-signature-type">yamlLoader</a><span class="tsd-signature-symbol"> = yamlLoader</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/parse/file.ts#L11">parse/file.ts:11</a></li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -282,6 +502,9 @@
 						<a href="classes/password.html" class="tsd-kind-icon">Password</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/cryptoproperty.html" class="tsd-kind-icon">Crypto<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -305,6 +528,15 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#secrets" class="tsd-kind-icon">Secrets</a>
 					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#envvalues" class="tsd-kind-icon">env<wbr>Values</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#nonce_byte_size" class="tsd-kind-icon">NONCE_<wbr>BYTE_<wbr>SIZE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#salt_size" class="tsd-kind-icon">SALT_<wbr>SIZE</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#parse" class="tsd-kind-icon">parse</a>
 					</li>
@@ -316,6 +548,21 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#file" class="tsd-kind-icon">file</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#recurse" class="tsd-kind-icon">recurse</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#validprovider" class="tsd-kind-icon">valid<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#yamlloader" class="tsd-kind-icon">yaml<wbr>Loader</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#scrypt_options" class="tsd-kind-icon">SCRYPT_<wbr>OPTIONS</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#loaders" class="tsd-kind-icon">loaders</a>
 					</li>
 				</ul>
 			</nav>

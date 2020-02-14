@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Password | @blinkhealth/config-yourself</title>
+	<title>CryptoProperty | @blinkhealth/config-yourself</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,35 +52,22 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="password.html">Password</a>
+					<a href="cryptoproperty.html">CryptoProperty</a>
 				</li>
 			</ul>
-			<h1>Class Password</h1>
+			<h1>Interface CryptoProperty</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Password implements decryption for <code>password</code> config-yourself files</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Password</span>
+						<span class="target">CryptoProperty</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -88,74 +75,25 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="password.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="password.html#decrypt" class="tsd-kind-icon">decrypt</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="cryptoproperty.html#provider" class="tsd-kind-icon">provider</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Password<span class="tsd-signature-symbol">(</span>crypto<span class="tsd-signature-symbol">: </span><a href="../interfaces/passwordcrypto.html" class="tsd-signature-type">PasswordCrypto</a>, secrets<span class="tsd-signature-symbol">: </span><a href="../interfaces/passwordsecrets.html" class="tsd-signature-type">PasswordSecrets</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="password.html" class="tsd-signature-type">Password</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L49">provider/password.ts:49</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>crypto: <a href="../interfaces/passwordcrypto.html" class="tsd-signature-type">PasswordCrypto</a></h5>
-								</li>
-								<li>
-									<h5>secrets: <a href="../interfaces/passwordsecrets.html" class="tsd-signature-type">PasswordSecrets</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="password.html" class="tsd-signature-type">Password</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="decrypt" class="tsd-anchor"></a>
-					<h3>decrypt</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">decrypt<span class="tsd-signature-symbol">(</span>ciphertext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/cryptoprovider.html">CryptoProvider</a>.<a href="../interfaces/cryptoprovider.html#decrypt">decrypt</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/password.ts#L66">provider/password.ts:66</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>ciphertext: <span class="tsd-signature-type">Buffer</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="provider" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> provider</h3>
+					<div class="tsd-signature tsd-kind-icon">provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"gpg"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"kms"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"password"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/blinkhealth/config-yourself-javascript/blob/fa10e3c/src/provider/index.ts#L19">provider/index.ts:19</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -170,55 +108,52 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
-						<a href="config.html" class="tsd-kind-icon">Config</a>
+						<a href="../classes/config.html" class="tsd-kind-icon">Config</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="datakey.html" class="tsd-kind-icon">Data<wbr>Key</a>
+						<a href="../classes/datakey.html" class="tsd-kind-icon">Data<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="gpg.html" class="tsd-kind-icon">GPG</a>
+						<a href="../classes/gpg.html" class="tsd-kind-icon">GPG</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="kms.html" class="tsd-kind-icon">KMS</a>
+						<a href="../classes/kms.html" class="tsd-kind-icon">KMS</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/password.html" class="tsd-kind-icon">Password</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="password.html" class="tsd-kind-icon">Password</a>
+					<li class="current tsd-kind-interface">
+						<a href="cryptoproperty.html" class="tsd-kind-icon">Crypto<wbr>Property</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="password.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="password.html#decrypt" class="tsd-kind-icon">decrypt</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="cryptoproperty.html#provider" class="tsd-kind-icon">provider</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/cryptoproperty.html" class="tsd-kind-icon">Crypto<wbr>Property</a>
+						<a href="cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a>
+						<a href="gpgcrypto.html" class="tsd-kind-icon">GPGCrypto</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/gpgcrypto.html" class="tsd-kind-icon">GPGCrypto</a>
+						<a href="gpgsecrets.html" class="tsd-kind-icon">GPGSecrets</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/gpgsecrets.html" class="tsd-kind-icon">GPGSecrets</a>
+						<a href="kmscrypto.html" class="tsd-kind-icon">KMSCrypto</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/kmscrypto.html" class="tsd-kind-icon">KMSCrypto</a>
+						<a href="mapofvalues.html" class="tsd-kind-icon">Map<wbr>OfValues</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/mapofvalues.html" class="tsd-kind-icon">Map<wbr>OfValues</a>
+						<a href="passwordcrypto.html" class="tsd-kind-icon">Password<wbr>Crypto</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/passwordcrypto.html" class="tsd-kind-icon">Password<wbr>Crypto</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/passwordsecrets.html" class="tsd-kind-icon">Password<wbr>Secrets</a>
+						<a href="passwordsecrets.html" class="tsd-kind-icon">Password<wbr>Secrets</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#secrets" class="tsd-kind-icon">Secrets</a>
