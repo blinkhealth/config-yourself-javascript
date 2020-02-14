@@ -1,17 +1,17 @@
 {
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@blinkhealth/config-yourself",
   "description": "A typescrypt + javascript runtime for decrypting config-yourself files",
-  "homepage": "https://github.com/blinkhealth/config-yourself-typescript",
+  "homepage": "https://github.com/blinkhealth/config-yourself-javascript",
   "bugs": {
-    "url": "https://github.com/blinkhealth/config-yourself-typescript/issues"
+    "url": "https://github.com/blinkhealth/config-yourself-javascript/issues"
   },
   "author": {
     "name": "Blink Health Engineering",
     "url": "https://github.com/blinkhealth"
   },
-  "repository": "github:blinkhealth/config-yourself-typescript",
+  "repository": "github:blinkhealth/config-yourself-javascript",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "src": "src/index.ts",
