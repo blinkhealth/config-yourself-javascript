@@ -1,5 +1,7 @@
 import { CryptoProvider } from './index'
-import { KMS as kmsService } from '@aws-sdk/client-kms-node'
+
+import KMS from 'aws-sdk/clients/kms'
+import {promisify} from 'util'
 
 /**
  * KMSCrypto contains a KMS `crypto.key` ARN
@@ -8,7 +10,7 @@ export interface KMSCrypto {
   key: string
 }
 
-export default class KMS implements CryptoProvider {
+export default class KMSClass implements CryptoProvider {
   /**
    * The KMS region to operate in
    */
@@ -16,7 +18,7 @@ export default class KMS implements CryptoProvider {
   /**
    * An AWS KMS client
    */
-  private service: kmsService
+  private service: KMS
 
   public constructor(crypto: KMSCrypto) {
     if (!crypto.key) {
@@ -32,11 +34,13 @@ export default class KMS implements CryptoProvider {
       )
     }
 
-    this.service = new kmsService({ region: this.region })
+    this.service = new KMS({ region: this.region })
   }
 
   public async decrypt(CiphertextBlob: Buffer): Promise<string> {
-    const data = await this.service.decrypt({ CiphertextBlob })
+    const decryptPromise = promisify<KMS.DecryptRequest, KMS.DecryptResponse>(this.service.decrypt)
+
+    const data = await decryptPromise({ CiphertextBlob })
 
     if (data.Plaintext) {
       return data.Plaintext.toString()
