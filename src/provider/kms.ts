@@ -1,7 +1,7 @@
 import { CryptoProvider } from './index'
 
 import KMS from 'aws-sdk/clients/kms'
-import {promisify} from 'util'
+import { promisify } from 'util'
 
 /**
  * KMSCrypto contains a KMS `crypto.key` ARN
